@@ -1,7 +1,7 @@
 var ghpages = require("gh-pages");
 
 var callback = function() {
-  console.log("Deploy");
+  console.log("Deployed motherfucker!");
 };
 
 ghpages.publish(

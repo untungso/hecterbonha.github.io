@@ -16,7 +16,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "node deploy.js"
+    "deploy": "next build && next export && node deploy.js"
   },
   "devDependencies": {
     "@types/node": "^13.1.2",
