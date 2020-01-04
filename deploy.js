@@ -1,3 +1,14 @@
 var ghpages = require("gh-pages");
 
-ghpages.publish("out", function(err) {});
+var callback = function() {
+  console.log("Deploy");
+};
+
+ghpages.publish(
+  "out",
+  {
+    branch: "master",
+    repo: "https://github.com/hecterbonha/hecterbonha.github.io.git",
+  },
+  callback
+);
