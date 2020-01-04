@@ -15,7 +15,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "deploy": "node deploy.js"
   },
   "devDependencies": {
     "@types/node": "^13.1.2",

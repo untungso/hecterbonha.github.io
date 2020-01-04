@@ -16,7 +16,6 @@ export default () => {
           <h1>USX ラボラトリー</h1>
           <h3>by {name}</h3>
         </div>
-        <div className="on-foot">© {new Date().getFullYear()} Untung So Andryanto</div>
       </div>
       <style jsx>{`
         .usx-icon {
@@ -41,7 +40,7 @@ export default () => {
           justify-content: flex-start;
           border: 2px solid var(--white);
           background-color: var(--black);
-          padding: 16px 8px;
+          padding: 32px;
         }
         .p-class {
           margin-bottom: 16px;
@@ -63,11 +62,10 @@ export default () => {
           background-color: var(--white);
           color: var(--black);
         }
-        .on-foot {
-          position: fixed;
-          bottom: 16px;
-          margin-top: 16px;
-          font-size: 10px;
+        @media only screen and (max-width: 600px) {
+          .inner {
+            padding: 16px 8px;
+          }
         }
       `}</style>
     </LayoutManager>
