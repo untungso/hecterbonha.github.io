@@ -1,5 +1,6 @@
 import React from "react";
 import { LayoutManager } from "../../components/LayoutManager";
+import Link from "next/link";
 
 const AboutIndex = () => {
   return (
@@ -11,6 +12,14 @@ const AboutIndex = () => {
           <h4>My name is</h4>
           <h2>Untung So Andryanto</h2>
           <h4>and I build solution stack for people, web, application, and server.</h4>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <Link href="/about/tech-stack">
+              <div className="link">Tech Stack</div>
+            </Link>
+            <Link href="/about/machine-setup">
+              <div className="link">Machine Setup</div>
+            </Link>
+          </div>
         </div>
       </div>
       <style jsx>{`
@@ -35,6 +44,10 @@ const AboutIndex = () => {
           width: 180px;
           border: 2px solid var(--white);
           margin-bottom: 32px;
+        }
+        .link {
+          color: var(--orange);
+          margin: 4px 8px 0px 0px;
         }
       `}</style>
     </LayoutManager>

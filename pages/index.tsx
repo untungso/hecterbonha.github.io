@@ -6,11 +6,6 @@ export default () => {
   return (
     <LayoutManager htmlHeadTitle="Home">
       <div className="wrapper">
-        <div className="nav-wrapper">
-          <div className="nav-button">.about</div>
-          <div className="nav-button">.blog</div>
-          <div className="nav-button">.labo</div>
-        </div>
         <div className="inner">
           <p className="p-class">Build. Experiment. Grow.</p>
           <h1>USX ラボラトリー</h1>
@@ -44,23 +39,6 @@ export default () => {
         }
         .p-class {
           margin-bottom: 16px;
-        }
-        .nav-wrapper {
-          display: flex;
-          flex-direction: row;
-        }
-        .nav-button {
-          margin: 16px;
-          background-color: var(--black);
-          padding: 8px;
-          border: 2px solid var(--white);
-        }
-        .nav-button:hover {
-          cursor: pointer;
-        }
-        .nav-button:active {
-          background-color: var(--white);
-          color: var(--black);
         }
         @media only screen and (max-width: 600px) {
           .inner {
