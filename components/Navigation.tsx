@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navigation: React.FC = () => {
   const [toggleNav, setToggleNav] = useState<boolean>(false);
+  const router = useRouter();
+
   return (
     <React.Fragment>
       <div className="navigation-bar">
@@ -12,17 +15,27 @@ const Navigation: React.FC = () => {
           </div>
         </div>
         <div className="nav-wrapper">
-          <Link href="/" as="index">
-            <div className="nav-button darkPurple">.</div>
+          <Link href="/" as="">
+            <div className={`nav-button darkPurple ${router.pathname === "/" ? "nav-active" : ""}`}>
+              .root
+            </div>
           </Link>
           <Link href="/about" as="about">
-            <div className="nav-button darkGray">.about</div>
+            <div
+              className={`nav-button darkGray ${router.pathname === "/about" ? "nav-active" : ""}`}
+            >
+              .about
+            </div>
           </Link>
           <Link href="/blog" as="blog">
-            <div className="nav-button indigo">.blog</div>
+            <div className={`nav-button indigo ${router.pathname === "/blog" ? "nav-active" : ""}`}>
+              .blog
+            </div>
           </Link>
           <Link href="/labo" as="labo">
-            <div className="nav-button pink">.labo</div>
+            <div className={`nav-button pink ${router.pathname === "/labo" ? "nav-active" : ""}`}>
+              .labo
+            </div>
           </Link>
         </div>
       </div>
@@ -73,6 +86,9 @@ const Navigation: React.FC = () => {
         }
         .pink {
           background-color: var(--pink);
+        }
+        .nav-active {
+          text-decoration-line: underline;
         }
         @media only screen and (max-width: 600px) {
           .nav-wrapper {

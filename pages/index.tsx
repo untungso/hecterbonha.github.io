@@ -7,7 +7,7 @@ export default () => {
     <LayoutManager htmlHeadTitle="Home">
       <div className="wrapper">
         <div className="inner">
-          <p className="p-class">Build. Experiment. Grow.</p>
+          <p className="p-class">Build. Experiment. Grow. Learn.</p>
           <h1>USX ラボラトリー</h1>
           <h3>by {name}</h3>
         </div>
