@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 const Navigation: React.FC = () => {
   const [toggleNav, setToggleNav] = useState<boolean>(false);
+  const [fullScreenWidth, setFullScreenWidth] = useState<any>("100vw");
   const router = useRouter();
-
+  useEffect(() => {
+    if (process.browser) {
+      setFullScreenWidth(`${document.body.clientWidth}px`);
+    }
+  }, []);
   return (
     <React.Fragment>
       <div className="navigation-bar">
@@ -16,14 +21,16 @@ const Navigation: React.FC = () => {
         </div>
         <div className="nav-wrapper">
           <Link href="/">
-            <div className={`nav-button darkPurple ${router.pathname === "/" ? "nav-active" : ""}`}>
+            <div className={`nav-button black ${router.pathname === "/" ? "nav-active" : ""}`}>
               .root
             </div>
           </Link>
           <Link href="/about">
             <div
               className={`nav-button darkGray ${
-                router.pathname === "/about" || "/about/tech-stack" || "/about/machine-setup"
+                router.pathname === "/about" ||
+                router.pathname === "/about/tech-stack" ||
+                router.pathname === "/about/machine-setup"
                   ? "nav-active"
                   : ""
               }`}
@@ -44,6 +51,11 @@ const Navigation: React.FC = () => {
         </div>
       </div>
       <div className="blur"></div>
+      <style jsx global>{`
+        body {
+          overflow: ${toggleNav ? "hidden" : "auto"};
+        }
+      `}</style>
       <style jsx>{`
         .navigation-bar {
           position: fixed;
@@ -97,8 +109,8 @@ const Navigation: React.FC = () => {
           text-decoration-line: underline;
         }
         .blur {
-          width: 100vw;
-          height: 100vh;
+          min-height: 100vh;
+          min-width: ${fullScreenWidth};
           position: fixed;
           top: 0;
           left: 0;

@@ -14,7 +14,7 @@ const FullScreenFix: React.FC<FullscreenFixInterface> = props => {
   useEffect(() => {
     if (process.browser) {
       setFullScreenHeight(`${window.innerHeight}px`);
-      setFullScreenWidth(`${window.innerWidth}px`);
+      setFullScreenWidth(`${document.body.clientWidth}px`);
     }
   }, []);
   return (
