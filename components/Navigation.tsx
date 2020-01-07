@@ -43,11 +43,13 @@ const Navigation: React.FC = () => {
           </Link>
         </div>
       </div>
+      <div className="blur"></div>
       <style jsx>{`
         .navigation-bar {
           position: fixed;
           top: 8px;
           width: 100%;
+          z-index: 10;
         }
         .nav-mobile {
           display: none;
@@ -93,6 +95,15 @@ const Navigation: React.FC = () => {
         }
         .nav-active {
           text-decoration-line: underline;
+        }
+        .blur {
+          width: 100vw;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: ${toggleNav ? "block" : "none"};
+          background-color: rgba(0, 0, 0, 0.85);
         }
         @media only screen and (max-width: 600px) {
           .nav-wrapper {

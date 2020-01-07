@@ -7,6 +7,7 @@ import { Footman } from "../components/Footman";
 interface LayoutManagerInterface {
   children: ReactChild | ReactChild[];
   htmlHeadTitle: string;
+  noFootman?: boolean;
 }
 
 const LayoutManager: React.FC<LayoutManagerInterface> = props => {
@@ -20,7 +21,7 @@ const LayoutManager: React.FC<LayoutManagerInterface> = props => {
       </Head>
       <Navigation />
       {props.children}
-      <Footman />
+      {props.noFootman ? <React.Fragment /> : <Footman />}
       <style jsx global>{`
         @import url("https://fonts.googleapis.com/css?family=Karla:400,700&display=swap");
         * {

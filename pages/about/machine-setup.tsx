@@ -12,12 +12,18 @@ const MachineSetup: React.FC = () => {
         borderColor="var(--red)"
       >
         <div className="inner">
-          <h1>Machine Setup</h1>
+          <h1>Machine Setup 💻</h1>
+          <div style={{ height: "16px" }}></div>
+          <p>My current development setup for hobby and weekend project</p>
           <div style={{ height: "16px" }}></div>
           <h5 style={{ color: "var(--darkGreen)" }}>Machine :</h5>
           <p>Thiccc Thonkpad E450</p>
           <h5 style={{ color: "var(--darkGreen)" }}>OS :</h5>
           <p>SolusOS</p>
+          <h5 style={{ color: "var(--darkGreen)" }}>IDE :</h5>
+          <p>VSCode, Atom, nano</p>
+          <h5 style={{ color: "var(--darkGreen)" }}>Tools :</h5>
+          <p>Hyper, zsh, Notion</p>
           <div style={{ display: "flex", flexDirection: "row", marginTop: "16px" }}>
             <Link href="/about">
               <div className="link">.whoami</div>
@@ -33,7 +39,8 @@ const MachineSetup: React.FC = () => {
           padding: 8px;
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center;
+          text-align: center;
         }
         .usx {
           width: 180px;

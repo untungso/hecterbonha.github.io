@@ -14,12 +14,17 @@ const TechStack: React.FC = () => {
         <div className="inner">
           <h1>My Stack 📚</h1>
           <div style={{ height: "16px" }}></div>
+          <p>
+            This is my go-to stack to handle both{" "}
+            <span style={{ fontWeight: "bolder" }}>Professionals</span> and Hobby task
+          </p>
+          <div style={{ height: "16px" }}></div>
           <h5 style={{ color: "var(--darkBlue)" }}>Lang :</h5>
-          <p>Javascript, Typescript, Go, PHP</p>
+          <p>Javascript, Typescript, Go, Dart</p>
           <h5 style={{ color: "var(--darkBlue)" }}>Framework :</h5>
-          <p>React, NextJS, Express, Echo</p>
+          <p>React, NextJS, Express, Echo, Flutter</p>
           <h5 style={{ color: "var(--darkBlue)" }}>Utils :</h5>
-          <p>Jest, Cypress</p>
+          <p>Jest, Cypress, Git</p>
           <div style={{ display: "flex", flexDirection: "row", marginTop: "16px" }}>
             <Link href="/about">
               <div className="link">.whoami</div>
@@ -35,7 +40,8 @@ const TechStack: React.FC = () => {
           padding: 8px;
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center;
+          text-align: center;
         }
         .usx {
           width: 180px;
