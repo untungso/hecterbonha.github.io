@@ -15,24 +15,28 @@ const Navigation: React.FC = () => {
           </div>
         </div>
         <div className="nav-wrapper">
-          <Link href="/" as="">
+          <Link href="/">
             <div className={`nav-button darkPurple ${router.pathname === "/" ? "nav-active" : ""}`}>
               .root
             </div>
           </Link>
-          <Link href="/about" as="about">
+          <Link href="/about">
             <div
-              className={`nav-button darkGray ${router.pathname === "/about" ? "nav-active" : ""}`}
+              className={`nav-button darkGray ${
+                router.pathname === "/about" || "/about/tech-stack" || "/about/machine-setup"
+                  ? "nav-active"
+                  : ""
+              }`}
             >
               .about
             </div>
           </Link>
-          <Link href="/blog" as="blog">
+          <Link href="/blog">
             <div className={`nav-button indigo ${router.pathname === "/blog" ? "nav-active" : ""}`}>
               .blog
             </div>
           </Link>
-          <Link href="/labo" as="labo">
+          <Link href="/labo">
             <div className={`nav-button pink ${router.pathname === "/labo" ? "nav-active" : ""}`}>
               .labo
             </div>

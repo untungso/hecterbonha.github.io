@@ -1,31 +1,26 @@
 import React from "react";
 import { LayoutManager } from "../components/LayoutManager";
+import { FullScreenFix } from "../components/FullScreenFix";
 
 export default () => {
   const name: string = "Untung So Andryanto";
+
   return (
     <LayoutManager htmlHeadTitle="Home">
-      <div className="wrapper">
+      <FullScreenFix
+        backgroundColor="var(--darkPurple)"
+        textColor="var(--white)"
+        borderColor="var(--white)"
+      >
         <div className="inner">
           <p className="p-class">Build. Experiment. Grow. Learn.</p>
           <h1>USX ラボラトリー</h1>
           <h3>by {name}</h3>
         </div>
-      </div>
+      </FullScreenFix>
       <style jsx>{`
         .usx-icon {
           width: 240px;
-        }
-        .wrapper {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          min-height: calc(100vh - 16px);
-          min-width: calc(100vw - 16px);
-          background-color: var(--darkPurple);
-          color: var(--white);
-          border: 8px solid var(--white);
         }
         .inner {
           max-width: 380px;

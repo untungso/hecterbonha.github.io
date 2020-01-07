@@ -1,38 +1,36 @@
 import React from "react";
 import { LayoutManager } from "../../components/LayoutManager";
 import Link from "next/link";
+import { FullScreenFix } from "../../components/FullScreenFix";
 
-const AboutTechStack = () => {
+const TechStack: React.FC = () => {
   return (
     <LayoutManager htmlHeadTitle="About">
-      <div className="wrapper">
+      <FullScreenFix
+        backgroundColor="var(--darkGreen)"
+        textColor="var(--white)"
+        borderColor="var(--blue)"
+      >
         <div className="inner">
-          <img src="/UUe46eY5_400x400.jpg" alt="Untung So Andryanto" className="usx" />
-          <h4>My name is</h4>
-          <h2>Untung So Andryanto</h2>
-          <h4>and I build solution stack for people, web, application, and server.</h4>
-          <div style={{ display: "flex", flexDirection: "row" }}>
-            <Link href="/about/tech-stack">
-              <div className="link">Tech Stack</div>
+          <h1>My Stack 📚</h1>
+          <div style={{ height: "16px" }}></div>
+          <h5 style={{ color: "var(--darkBlue)" }}>Lang :</h5>
+          <p>Javascript, Typescript, Go, PHP</p>
+          <h5 style={{ color: "var(--darkBlue)" }}>Framework :</h5>
+          <p>React, NextJS, Express, Echo</p>
+          <h5 style={{ color: "var(--darkBlue)" }}>Utils :</h5>
+          <p>Jest, Cypress</p>
+          <div style={{ display: "flex", flexDirection: "row", marginTop: "16px" }}>
+            <Link href="/about">
+              <div className="link">.whoami</div>
             </Link>
             <Link href="/about/machine-setup">
-              <div className="link">Machine Setup</div>
+              <div className="link">.hwinfo</div>
             </Link>
           </div>
         </div>
-      </div>
+      </FullScreenFix>
       <style jsx>{`
-        .wrapper {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          min-height: calc(100vh - 16px);
-          min-width: calc(100vw - 16px);
-          background-color: var(--darkGray);
-          color: var(--white);
-          border: 8px solid var(--white);
-        }
         .inner {
           padding: 8px;
           display: flex;
@@ -45,12 +43,18 @@ const AboutTechStack = () => {
           margin-bottom: 32px;
         }
         .link {
-          color: var(--orange);
+          color: var(--black);
           margin: 4px 8px 0px 0px;
+          border: 2px solid var(--black);
+          background-color: var(--white);
+          padding: 8px 16px;
+        }
+        .link:hover {
+          cursor: pointer;
         }
       `}</style>
     </LayoutManager>
   );
 };
 
-export default AboutTechStack;
+export default TechStack;

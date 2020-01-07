@@ -3,26 +3,27 @@ import { LayoutManager } from "../../components/LayoutManager";
 import Link from "next/link";
 import { FullScreenFix } from "../../components/FullScreenFix";
 
-const AboutIndex = () => {
+const MachineSetup: React.FC = () => {
   return (
     <LayoutManager htmlHeadTitle="About">
       <FullScreenFix
-        backgroundColor="var(--darkGray)"
+        backgroundColor="var(--darkBlue)"
         textColor="var(--white)"
-        borderColor="var(--peach)"
+        borderColor="var(--red)"
       >
         <div className="inner">
-          <img src="/UUe46eY5_400x400.jpg" alt="Untung So Andryanto" className="usx" />
-          <h1>Hallo! 👋</h1>
-          <h4>My name is</h4>
-          <h2>Untung So Andryanto</h2>
-          <h4>and I build solution stack for people, web, application, and server.</h4>
+          <h1>Machine Setup</h1>
+          <div style={{ height: "16px" }}></div>
+          <h5 style={{ color: "var(--darkGreen)" }}>Machine :</h5>
+          <p>Thiccc Thonkpad E450</p>
+          <h5 style={{ color: "var(--darkGreen)" }}>OS :</h5>
+          <p>SolusOS</p>
           <div style={{ display: "flex", flexDirection: "row", marginTop: "16px" }}>
+            <Link href="/about">
+              <div className="link">.whoami</div>
+            </Link>
             <Link href="/about/tech-stack">
               <div className="link">.techstack</div>
-            </Link>
-            <Link href="/about/machine-setup">
-              <div className="link">.hwinfo</div>
             </Link>
           </div>
         </div>
@@ -54,4 +55,4 @@ const AboutIndex = () => {
   );
 };
 
-export default AboutIndex;
+export default MachineSetup;
