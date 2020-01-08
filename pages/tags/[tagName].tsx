@@ -15,7 +15,7 @@ export default () => {
         borderColor="var(--lightGray)"
       >
         <div className="blog-post-wrapper">
-          <h1 style={{ textAlign: "center", width: "100%" }}>Blog/{tagName}</h1>
+          <h1 style={{ textAlign: "center", width: "100%" }}>#{tagName}</h1>
           <BlogPost
             title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
             author="Untung So Andryanto"

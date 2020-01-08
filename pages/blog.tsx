@@ -7,8 +7,8 @@ export default () => {
   return (
     <LayoutManager htmlHeadTitle="Blog" noFootman={true}>
       <FullScreenFix
-        backgroundColor="var(--indigo)"
-        textColor="var(--white)"
+        backgroundColor="var(--white)"
+        textColor="var(--darkBlue)"
         borderColor="var(--lightGray)"
       >
         <div className="blog-post-wrapper">

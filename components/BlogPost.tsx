@@ -22,7 +22,7 @@ const BlogPost: React.FC<BlogPostInterface> = props => {
       low: "--peach",
     },
     3: {
-      high: "--brown",
+      high: "--indigo",
       med: "--lightGray",
       low: "--blue",
     },
