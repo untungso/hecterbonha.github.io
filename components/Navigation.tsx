@@ -30,7 +30,8 @@ const Navigation: React.FC = () => {
               className={`nav-button darkGray ${
                 router.pathname === "/about" ||
                 router.pathname === "/about/tech-stack" ||
-                router.pathname === "/about/machine-setup"
+                router.pathname === "/about/machine-setup" ||
+                router.pathname === "/about/bio"
                   ? "nav-active"
                   : ""
               }`}
@@ -50,7 +51,7 @@ const Navigation: React.FC = () => {
           </Link>
         </div>
       </div>
-      <div className="blur"></div>
+      <div className="blur" onClick={() => setToggleNav(!toggleNav)}></div>
       <style jsx global>{`
         body {
           overflow: ${toggleNav ? "hidden" : "auto"};

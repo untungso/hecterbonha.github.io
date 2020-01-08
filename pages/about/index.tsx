@@ -17,12 +17,22 @@ const AboutIndex = () => {
           <h4>my name is</h4>
           <h2>Untung So Andryanto</h2>
           <h4>and I build solution stack for people, hybrid apps, and server side.</h4>
-          <div style={{ display: "flex", flexDirection: "row", marginTop: "16px" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              marginTop: "16px",
+            }}
+          >
             <Link href="/about/tech-stack">
               <div className="link">.techstack</div>
             </Link>
             <Link href="/about/machine-setup">
               <div className="link">.hwinfo</div>
+            </Link>
+            <Link href="/about/bio">
+              <div className="link">.bio</div>
             </Link>
           </div>
           <div style={{ display: "flex", flexDirection: "row", marginTop: "16px" }}>

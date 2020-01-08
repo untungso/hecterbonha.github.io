@@ -7,9 +7,9 @@ export default () => {
   return (
     <LayoutManager htmlHeadTitle="Blog" noFootman={true}>
       <FullScreenFix
-        backgroundColor="var(--white)"
-        textColor="var(--darkBlue)"
-        borderColor="var(--lightGray)"
+        backgroundColor="var(--indigo)"
+        textColor="var(--peach)"
+        borderColor="var(--yellow)"
       >
         <div className="blog-post-wrapper">
           <h1 style={{ textAlign: "center", width: "100%" }}>Blog</h1>
