@@ -12,51 +12,54 @@ const AboutBio = () => {
         borderColor="var(--peach)"
       >
         <div className="bio">
-          <Link href="about">
-            <div className="back-button">.back</div>
+          <div style={{ fontSize: "5em", marginBottom: "16px" }}>🃏</div>
+          <p>Hi! My name is Untung So Andryanto and I from Jakarta, Indonesia. 🇮🇩</p>
+          <br />
+          <p>Things I love lately include, but not limited to :</p>
+          <ul style={{ marginLeft: "2em" }}>
+            <li>Empowering people growth</li>
+            <li>Scrum Agile</li>
+            <li>Javascript/Typescript</li>
+          </ul>
+          <br />
+          <p>
+            Using <span style={{ fontWeight: "bolder", fontSize: "1.2em" }}>LINUX</span> since in my
+            high school years for the sake of being different with other kids arround and felt cool.
+            Guide me later into programming. Due to nature of configure it by yourself and the
+            effort to go meticulously through the documentation.
+          </p>
+          <br />
+          <p>
+            Having no IT background doesn't stop me to pursue career in software development,
+            because I believe that everyone if they want to they can do anything.
+          </p>
+          <br />
+
+          <p>
+            Currently leading a team of enthusiast{" "}
+            <span style={{ fontWeight: "bolder", fontSize: "1.2em" }}>FRONT END ENGINEER</span> in
+            some tech based multifinancing company in Jakarta, Indonesia.
+          </p>
+          <Link href="/about">
+            <div className="link">.back</div>
           </Link>
-          NodeJS and typescript are everywhere these days. At big tech companies and small startups.
-          Always bet on Javascript. Javascript will not go away in the next 10 to 20 years. Getting
-          people to update their browsers will not be easy. Maybe we will not write directly
-          Javascript but in the end, it will be vanilla javascript after some transformation steps.
-          Setting up a new nodejs project is hard. Only configuring webpack and babeljs can be a big
-          pain point. Not speaking about all the other stuff like coming up with a structure for a
-          new project. Frameworks like Ruby on Rails are often very opinionated about things like
-          that and are easy to use and project you never touched are easy to understand because you
-          know the skeleton of the project. This is why this year I want to start a hobby project
-          and work on it. It should be as easy to use and understand as Ruby on Rails but it should
-          be based on node js. Also, it should use modern Javascript and for example avoid this as
-          much as possible.NodeJS and typescript are everywhere these days. At big tech companies
-          and small startups. Always bet on Javascript. Javascript will not go away in the next 10
-          to 20 years. Getting people to update their browsers will not be easy. Maybe we will not
-          write directly Javascript but in the end, it will be vanilla javascript after some
-          transformation steps. Setting up a new nodejs project is hard. Only configuring webpack
-          and babeljs can be a big pain point. Not speaking about all the other stuff like coming up
-          with a structure for a new project. Frameworks like Ruby on Rails are often very
-          opinionated about things like that and are easy to use and project you never touched are
-          easy to understand because you know the skeleton of the project. This is why this year I
-          want to start a hobby project and work on it. It should be as easy to use and understand
-          as Ruby on Rails but it should be based on node js. Also, it should use modern Javascript
-          and for example avoid this as much as possible.NodeJS and typescript are everywhere these
-          days. At big tech companies and small startups. Always bet on Javascript. Javascript will
-          not go away in the next 10 to 20 years. Getting people to update their browsers will not
-          be easy. Maybe we will not write directly Javascript but in the end, it will be vanilla
-          javascript after some transformation steps. Setting up a new nodejs project is hard. Only
-          configuring webpack and babeljs can be a big pain point. Not speaking about all the other
-          stuff like coming up with a structure for a new project. Frameworks like Ruby on Rails are
-          often very opinionated about things like that and are easy to use and project you never
-          touched are easy to understand because you know the skeleton of the project. This is why
-          this year I want to start a hobby project and work on it. It should be as easy to use and
-          understand as Ruby on Rails but it should be based on node js. Also, it should use modern
-          Javascript and for example avoid this as much as possible.
         </div>
       </FullScreenFix>
       <style jsx>{`
         .bio {
           margin: 72px 8px 16px 8px;
+          max-width: 640px;
         }
-        .back-button {
+        .link {
+          color: var(--black);
+          border: 2px solid var(--black);
+          background-color: var(--white);
           padding: 8px 16px;
+          width: auto;
+          margin-top: 32px;
+        }
+        .link:hover {
+          cursor: pointer;
         }
       `}</style>
     </LayoutManager>

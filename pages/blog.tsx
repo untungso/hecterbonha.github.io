@@ -41,6 +41,34 @@ export default () => {
             tags={["jsx", "wow"]}
             alt={4}
           />
+          <BlogPost
+            title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
+            author="Untung So Andryanto"
+            datePublished="1 January 2020"
+            tags={["jsx", "wow"]}
+            alt={1}
+          />
+          <BlogPost
+            title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
+            author="Untung So Andryanto"
+            datePublished="1 January 2020"
+            tags={["jsx", "wow"]}
+            alt={2}
+          />
+          <BlogPost
+            title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
+            author="Untung So Andryanto"
+            datePublished="1 January 2020"
+            tags={["jsx", "wow"]}
+            alt={3}
+          />
+          <BlogPost
+            title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
+            author="Untung So Andryanto"
+            datePublished="1 January 2020"
+            tags={["jsx", "wow"]}
+            alt={4}
+          />
         </div>
       </FullScreenFix>
       <style jsx>{`
