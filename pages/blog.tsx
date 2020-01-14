@@ -3,7 +3,12 @@ import { LayoutManager } from "../components/LayoutManager";
 import { FullScreenFix } from "../components/FullScreenFix";
 import { BlogPost } from "../components/BlogPost";
 
-export default () => {
+interface BlogPageInterface {
+  stars: string;
+}
+
+const BlogPage: React.FC<BlogPageInterface> = ({ stars }) => {
+  console.log(stars);
   return (
     <LayoutManager htmlHeadTitle="Blog" noFootman={true}>
       <FullScreenFix
@@ -17,57 +22,8 @@ export default () => {
             title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
             author="Untung So Andryanto"
             datePublished="1 January 2020"
-            tags={["jsx", "wow"]}
+            tags={["ID", "wow"]}
             alt={1}
-          />
-          <BlogPost
-            title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
-            author="Untung So Andryanto"
-            datePublished="1 January 2020"
-            tags={["jsx", "wow"]}
-            alt={2}
-          />
-          <BlogPost
-            title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
-            author="Untung So Andryanto"
-            datePublished="1 January 2020"
-            tags={["jsx", "wow"]}
-            alt={3}
-          />
-          <BlogPost
-            title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
-            author="Untung So Andryanto"
-            datePublished="1 January 2020"
-            tags={["jsx", "wow"]}
-            alt={4}
-          />
-          <BlogPost
-            title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
-            author="Untung So Andryanto"
-            datePublished="1 January 2020"
-            tags={["jsx", "wow"]}
-            alt={1}
-          />
-          <BlogPost
-            title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
-            author="Untung So Andryanto"
-            datePublished="1 January 2020"
-            tags={["jsx", "wow"]}
-            alt={2}
-          />
-          <BlogPost
-            title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
-            author="Untung So Andryanto"
-            datePublished="1 January 2020"
-            tags={["jsx", "wow"]}
-            alt={3}
-          />
-          <BlogPost
-            title="Make websites work offline - Part 1: What are Service Workers and How to get a custom App Install button on the website."
-            author="Untung So Andryanto"
-            datePublished="1 January 2020"
-            tags={["jsx", "wow"]}
-            alt={4}
           />
         </div>
       </FullScreenFix>
@@ -88,3 +44,10 @@ export default () => {
     </LayoutManager>
   );
 };
+
+BlogPage.getInitialProps:any = async () => {
+  const test: string = "TEST";
+  return { stars: test };
+};
+
+export default BlogPage;

@@ -45,6 +45,9 @@ const AboutIndex = () => {
             <a href="mailto:untungsoandryanto@gmail.com" className="social gm" target="_blank">
               .gmail
             </a>
+            <a href="https://github.com/hecterbonha" className="social gh" target="_blank">
+              .gh
+            </a>
           </div>
         </div>
       </FullScreenFix>
@@ -57,7 +60,7 @@ const AboutIndex = () => {
           text-align: center;
         }
         .usx {
-          width: 136px;
+          width: 156px;
           border: 2px solid var(--white);
           margin-bottom: 16px;
         }
@@ -92,6 +95,9 @@ const AboutIndex = () => {
         }
         .gm {
           background-color: var(--red);
+        }
+        .gh {
+          background-color: var(--lightGray);
         }
       `}</style>
     </LayoutManager>
