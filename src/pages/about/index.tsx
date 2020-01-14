@@ -61,8 +61,14 @@ const AboutIndex = () => {
         }
         .usx {
           width: 156px;
+          height: 156px;
           border: 2px solid var(--white);
           margin-bottom: 16px;
+          background-color: var(--red);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
         .link {
           color: var(--black);

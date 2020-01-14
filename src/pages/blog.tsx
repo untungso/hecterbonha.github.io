@@ -45,9 +45,4 @@ const BlogPage: React.FC<BlogPageInterface> = ({ stars }) => {
   );
 };
 
-BlogPage.getInitialProps:any = async () => {
-  const test: string = "TEST";
-  return { stars: test };
-};
-
 export default BlogPage;
