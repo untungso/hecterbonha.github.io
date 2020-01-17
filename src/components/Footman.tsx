@@ -7,7 +7,7 @@ interface FootmanInterface {
 const Footman: React.FC<FootmanInterface> = props => {
   return (
     <React.Fragment>
-      <div className="on-foot">© {new Date().getFullYear()} Untung So Andryanto</div>
+      <GetCurrentYear />
       <style jsx>{`
         .on-foot {
           position: fixed;
@@ -21,6 +21,10 @@ const Footman: React.FC<FootmanInterface> = props => {
       `}</style>
     </React.Fragment>
   );
+};
+
+const GetCurrentYear = () => {
+  return <div className="on-foot">© {new Date().getFullYear()} Untung So Andryanto</div>;
 };
 
 export { Footman };

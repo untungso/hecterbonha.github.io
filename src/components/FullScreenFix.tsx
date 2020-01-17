@@ -8,8 +8,8 @@ interface FullscreenFixInterface {
 }
 
 const FullScreenFix: React.FC<FullscreenFixInterface> = props => {
-  const [fullScreenHeight, setFullScreenHeight] = useState<any>("100vh");
-  const [fullScreenWidth, setFullScreenWidth] = useState<any>("100vw");
+  const [fullScreenHeight, setFullScreenHeight] = useState<string>("100vh");
+  const [fullScreenWidth, setFullScreenWidth] = useState<string>("100vw");
 
   useEffect(() => {
     if (process.browser) {
