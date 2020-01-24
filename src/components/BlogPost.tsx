@@ -38,17 +38,28 @@ const BlogPost: React.FC<BlogPostInterface> = props => {
         <div className="date-published">on {props.datePublished}</div>
         <div className="title">{props.title}</div>
         <div className="author">by {props.author}</div>
-        <div>
+        <div style={{ marginTop: "16px" }}>
           {props.tags.map(i => {
             return (
               <Link href={`/tags/${i}`} key={i}>
-                <span style={{ marginRight: "8px" }}>#{i}</span>
+                <span className="tags">#{i}</span>
               </Link>
             );
           })}
         </div>
       </div>
       <style jsx>{`
+        .tags {
+          margin: 0 8px 0 0;
+          padding: 4px;
+          border: 1px solid var(${postColorTemplates[props.alt].low});
+        }
+        .tags:hover {
+          cursor: pointer;
+          padding: 4px;
+          background-color: var(${postColorTemplates[props.alt].low});
+          color: var(${postColorTemplates[props.alt].high});
+        }
         .wrapper {
           max-width: 420px;
           background-color: var(${postColorTemplates[props.alt].high});
@@ -57,12 +68,13 @@ const BlogPost: React.FC<BlogPostInterface> = props => {
           padding: 16px;
           color: var(${postColorTemplates[props.alt].low});
         }
-        .wrapper:hover {
-          cursor: pointer;
-        }
         .title {
           font-size: 1.3em;
           font-weight: bolder;
+        }
+        .title:hover {
+          cursor: pointer;
+          text-decoration: underline;
         }
         .author {
           font-size: 1em;
@@ -73,6 +85,7 @@ const BlogPost: React.FC<BlogPostInterface> = props => {
         .author:hover {
           background-color: var(${postColorTemplates[props.alt].low});
           color: var(${postColorTemplates[props.alt].high});
+          cursor: pointer;
         }
         .date-published {
           font-size: 0.8em;
