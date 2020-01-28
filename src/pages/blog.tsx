@@ -23,7 +23,7 @@ const BlogPage: React.FC<BlogPageInterface> = ({ stars }) => {
             author="Untung So Andryanto"
             datePublished="1 January 2020"
             tags={["ID", "wow"]}
-            alt={1}
+            alt={4}
           />
         </div>
       </FullScreenFix>
