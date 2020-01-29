@@ -15,7 +15,7 @@ const TechStack: React.FC = () => {
           <h1>My Stack 📚</h1>
           <div style={{ height: "16px" }}></div>
           <p>
-            This is my go-to stack to handle both{" "}
+            This is my go-to stack to handle both
             <span style={{ fontWeight: "bolder" }}>Professionals</span> and Hobby task
           </p>
           <div style={{ height: "16px" }}></div>
@@ -24,7 +24,7 @@ const TechStack: React.FC = () => {
           <h5 style={{ color: "var(--darkBlue)" }}>Framework :</h5>
           <p>React, NextJS, Express, Echo, Flutter</p>
           <h5 style={{ color: "var(--darkBlue)" }}>Utils :</h5>
-          <p>Jest, Cypress, Git</p>
+          <p>Jest, Cypress, GIT, Agile Methodologies</p>
           <div style={{ display: "flex", flexDirection: "row", marginTop: "16px" }}>
             <Link href="/about">
               <div className="link">.whoami</div>

@@ -55,7 +55,7 @@ const AboutBio = () => {
           border: 2px solid var(--black);
           background-color: var(--white);
           padding: 8px 16px;
-          width: auto;
+          width: 40px;
           margin-top: 32px;
         }
         .link:hover {

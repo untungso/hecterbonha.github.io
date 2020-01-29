@@ -8,7 +8,7 @@ const TechStack: React.FC = () => {
       <FullScreenFix
         backgroundColor="var(--pink)"
         textColor="var(--black)"
-        borderColor="var(--orange)"
+        borderColor="var(--indigo)"
       >
         <div className="inner">
           <h1>Labo</h1>
