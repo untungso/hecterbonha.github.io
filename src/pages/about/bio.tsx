@@ -36,8 +36,8 @@ const AboutBio = () => {
           <br />
 
           <p>
-            Currently leading a team of enthusiast{" "}
-            <span style={{ fontWeight: "bolder", fontSize: "1.2em" }}>FRONT END ENGINEER</span> in
+            Currently leading a pack of enthusiast{" "}
+            <span style={{ fontWeight: "bolder", fontSize: "1.2em" }}>Engineering Team</span> in
             some tech based multifinancing company in Jakarta, Indonesia.
           </p>
           <Link href="/about">
